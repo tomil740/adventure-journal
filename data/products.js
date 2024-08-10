@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -658,3 +658,27 @@ const products = [
     ]
   }
 ];
+
+export function getProductById(productId){
+
+  let theItem ={
+    id: "string",
+      image: "string",
+      name: "string",
+      rating: {
+          stars: 7,
+          count: 9
+      },
+      priceCents: 8,
+      keywords: "string"["dsfsd","dsfs"],
+      type: undefined,
+      sizeChartLink: undefined
+    }
+
+  products.forEach((item) => {
+    if(item.id == productId){
+      theItem = item;
+    }
+  });
+  return theItem;
+}
